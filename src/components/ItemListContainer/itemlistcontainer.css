@@ -1,0 +1,10 @@
+.itemlistcontainer{
+  padding: 20px 50px;
+}
+.itemlist{
+  display: flex;
+}
+.item{
+  margin: 0 20px;
+  background-color: rgb(80, 80, 80);
+}
