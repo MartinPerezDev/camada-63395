@@ -1,31 +1,58 @@
 const products = [
   {
-    id: "Afttt2112",
-    name: "Remera Verde",
+    id: "Grt223",
+    name: "Remera Extreme",
     description: "",
-    image: "https://th.bing.com/th/id/OIP.WjjrgzWqkRPuE-b15zdhUQHaHZ?rs=1&pid=ImgDetMain",
-    price: 500,
+    price: 400,
     stock: 10,
-    category: "remera"
+    image: "/img/remera-h.jpg",
+    category: "remeras"
   },
   {
-    id: "Rttt22131",
-    name: "Pantalon Adidas",
+    id: "Grt224",
+    name: "Remera Fitz Roy",
     description: "",
-    image: "https://th.bing.com/th/id/OIP.CBA78ZqCA0W97KBBULjEbAAAAA?rs=1&pid=ImgDetMain",
-    price: 300,
+    price: 420,
     stock: 4,
-    category: "pantalon"
+    image: "/img/remera-m.jpg",
+    category: "remeras"
   },
   {
-    id: "Ghh23323",
-    name: "Zapatillas Nike",
+    id: "Hff556",
+    name: "Pantalon Dorian",
     description: "",
-    image: "https://th.bing.com/th/id/OIP.OlrL677E_4UMv0P-HEKw_wHaE7?rs=1&pid=ImgDetMain",
-    price: 600,
+    price: 720,
+    stock: 5,
+    image: "/img/pantalon-h.jpg",
+    category: "pantalones"
+  },
+  {
+    id: "Hff557",
+    name: "Pantalon Ambar",
+    description: "",
+    price: 620,
+    stock: 17,
+    image: "/img/pantalon-m.jpg",
+    category: "pantalones"
+  },
+  {
+    id: "Wre442",
+    name: "Zapatillas Cloudfield",
+    description: "",
+    price: 800,
     stock: 2,
-    category: "zapatilla"
-  }
+    image: "/img/zapatillas-m.jpg",
+    category: "zapatillas"
+  },
+  {
+    id: "Wre443",
+    name: "Zapatillas Space",
+    description: "",
+    price: 820,
+    stock: 6,
+    image: "/img/zapatillas-h.jpg",
+    category: "zapatillas"
+  },
 ]
 
 const getProducts = () => {

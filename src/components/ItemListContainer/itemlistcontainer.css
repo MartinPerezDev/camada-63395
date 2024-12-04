@@ -1,10 +1,27 @@
 .itemlistcontainer{
-  padding: 20px 50px;
-}
-.itemlist{
+  padding: 50px;
   display: flex;
+  flex-direction: column;
 }
-.item{
-  margin: 0 20px;
-  background-color: rgb(80, 80, 80);
+.itemlistcontainer .itemlist{
+  display: flex;
+  flex-wrap: wrap;
+}
+.itemlistcontainer .item{
+  width: 20%;
+  margin: 3% 6%;
+  padding: 2%;
+  border: 2px solid rgb(37, 37, 37);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item .img-item{
+  width: 100%;
+  border-radius: 1%;
+  background-color: rgb(39, 39, 39);
+}
+.item .text-item{
+  padding: 1% 0;
 }
