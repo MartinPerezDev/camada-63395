@@ -2,7 +2,7 @@ const products = [
   {
     id: "Grt223",
     name: "Remera Extreme",
-    description: "",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate at, rem iste quia magnam assumenda. Consequatur voluptas beatae ex dolorum dolor sapiente, ipsa est nobis voluptate, odit odio harum quae.",
     price: 400,
     stock: 10,
     image: "/img/remera-h.jpg",
