@@ -11,7 +11,7 @@ const products = [
   {
     id: "Grt224",
     name: "Remera Fitz Roy",
-    description: "",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate at, rem iste quia magnam assumenda. Consequatur voluptas beatae ex dolorum dolor sapiente, ipsa est nobis voluptate, odit odio harum quae.",
     price: 420,
     stock: 4,
     image: "/img/remera-m.jpg",
@@ -20,7 +20,7 @@ const products = [
   {
     id: "Hff556",
     name: "Pantalon Dorian",
-    description: "",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate at, rem iste quia magnam assumenda. Consequatur voluptas beatae ex dolorum dolor sapiente, ipsa est nobis voluptate, odit odio harum quae.",
     price: 720,
     stock: 5,
     image: "/img/pantalon-h.jpg",
@@ -29,7 +29,7 @@ const products = [
   {
     id: "Hff557",
     name: "Pantalon Ambar",
-    description: "",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate at, rem iste quia magnam assumenda. Consequatur voluptas beatae ex dolorum dolor sapiente, ipsa est nobis voluptate, odit odio harum quae.",
     price: 620,
     stock: 17,
     image: "/img/pantalon-m.jpg",
@@ -38,7 +38,7 @@ const products = [
   {
     id: "Wre442",
     name: "Zapatillas Cloudfield",
-    description: "",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate at, rem iste quia magnam assumenda. Consequatur voluptas beatae ex dolorum dolor sapiente, ipsa est nobis voluptate, odit odio harum quae.",
     price: 800,
     stock: 2,
     image: "/img/zapatillas-m.jpg",
@@ -47,7 +47,7 @@ const products = [
   {
     id: "Wre443",
     name: "Zapatillas Space",
-    description: "",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate at, rem iste quia magnam assumenda. Consequatur voluptas beatae ex dolorum dolor sapiente, ipsa est nobis voluptate, odit odio harum quae.",
     price: 820,
     stock: 6,
     image: "/img/zapatillas-h.jpg",
