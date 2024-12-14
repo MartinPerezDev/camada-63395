@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
         setProduct(productFind)
       })
 
-  }, [idProduct])
+  }, [])
 
   return (
     <ItemDetail product={product} />

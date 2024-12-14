@@ -1,19 +1,22 @@
 import CartWidget from "./CartWidget"
 import { BsBox } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 
 import "./navbar.css"
 
 const NavBar = () => {
 
+  const navigate = useNavigate()
 
   return (
     <nav className="navbar">
 
+      <button onClick={ () => navigate(-1) } >Ir hacia atras</button>
+
       <ul className="categories">
-        <Link to="/category/remeras" className="category">Remeras</Link>
-        <Link to="/category/pantalones" className="category">Pantalones</Link>
-        <Link to="/category/zapatillas" className="category">Zapatillas</Link>
+        <NavLink to="/category/remeras" className={ ( { isActive } ) => isActive ? "category-active" : "category" } >Remeras</NavLink>
+        <NavLink to="/category/pantalones" className={ ( { isActive } ) => isActive ? "category-active" : "category" }>Pantalones</NavLink>
+        <NavLink to="/category/zapatillas" className={ ( { isActive } ) => isActive ? "category-active" : "category" }>Zapatillas</NavLink>
       </ul>
 
       <Link to="/" className="brand primary-font-color">

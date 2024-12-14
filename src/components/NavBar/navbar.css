@@ -44,3 +44,12 @@
 .cartwidget .number-cartwidget{
   padding: 0 10px;
 }
+
+.category{
+  color: white;
+  text-decoration: none;
+}
+.category-active{
+  color: rgb(52, 209, 52);
+  text-decoration: underline;
+}
