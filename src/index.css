@@ -9,6 +9,10 @@
   font-weight: 400;
   font-style: normal;
 }
+a{
+  color: white;
+  text-decoration: none;
+}
 
 .primary-font-color{
   color: #2ECC71;
