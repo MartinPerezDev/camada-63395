@@ -1,0 +1,101 @@
+.cart{
+  padding: 30px;
+}
+.title-cart{
+  padding: 20px 0;
+}
+.cart .item-cart{
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 5px solid rgb(42, 42, 42);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
+}
+.img-item-cart{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.delete-item-cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(45, 6, 6);
+  border: 1px solid rgb(235, 144, 144);
+  border-radius: 5px;
+  color: rgb(203, 124, 124);
+  font-size: 20px;
+}
+.delete-item-cart:hover{
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(190, 69, 69);
+  color: rgb(203, 124, 124);
+}
+.info-cart{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.text-info-cart{
+  padding: 10px 0;
+}
+.button-delete-cart{
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(45, 6, 6);
+  border: 1px solid rgb(235, 144, 144);
+  border-radius: 5px;
+  color: rgb(203, 124, 124);
+  font-size: 20px;
+}
+.button-delete-cart:hover{
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(190, 69, 69);
+  color: rgb(203, 124, 124);
+}
+
+/*Empty cart styles*/
+.empty-cart{
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.button-home-empty-cart{
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  background-color: rgb(42, 42, 42);
+  border: 2px solid #1b8246;
+  border-radius: 5px;
+  color: #2ECC71;
+}
+.button-to-cart{
+  margin: 20px 0;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(9, 45, 6);
+  border: 1px solid rgb(159, 235, 144);
+  border-radius: 5px;
+  color: rgb(124, 203, 127);
+  font-size: 20px;
+}
