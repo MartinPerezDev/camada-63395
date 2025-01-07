@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import ItemDetail from "./ItemDetail"
-import { getProducts } from "../../data/data.js"
+import { doc, getDoc } from "firebase/firestore"
+import db from "../../db/db.js"
 import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
@@ -8,13 +9,22 @@ const ItemDetailContainer = () => {
 
   const { idProduct } = useParams()
 
-  useEffect(()=> {
+  const getProduct = async() => {
+    try {
+      const docRef = doc(db, "products", idProduct)
+      const dataDb = await getDoc(docRef)
 
-    getProducts()
-      .then( (data) => {
-        const productFind = data.find( (dataProduct) => dataProduct.id === idProduct )
-        setProduct(productFind)
-      })
+      const data = { id: dataDb.id, ...dataDb.data() }
+
+      setProduct(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(()=> {
+  
+    getProduct()
 
   }, [idProduct])
 

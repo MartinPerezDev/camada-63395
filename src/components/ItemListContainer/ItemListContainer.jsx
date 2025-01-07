@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
-import { getProducts } from "../../data/data.js"
 import ItemList from "./ItemList.jsx"
 import { useParams } from "react-router-dom"
+import { collection, getDocs, query, where } from "firebase/firestore"
+import db from "../../db/db.js"
 import "./itemlistcontainer.css"
 
 const ItemListContainer = ({ greeting }) => {
@@ -9,25 +10,46 @@ const ItemListContainer = ({ greeting }) => {
 
   const { idCategory } = useParams()
 
+  const collectionName = collection(db, "products")
+
+  const getProducts = async() => {
+    try {
+      const dataDb = await getDocs(collectionName)
+
+      const data = dataDb.docs.map((productDb) => {
+        return { id: productDb.id, ...productDb.data() }
+      })
+
+      setProducts(data)
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const getProductsByCategory = async() => {
+    try {
+      const q = query( collectionName , where("category", "==", idCategory ) )
+      const dataDb = await getDocs(q)
+  
+      const data = dataDb.docs.map((productDb) => {
+        return { id: productDb.id, ...productDb.data() }
+      })
+  
+      setProducts(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   useEffect(() => {
-    getProducts()
-      .then((data) => {
-        if(idCategory){
-          //filtrar la data por ese valor
-          const filterProducts = data.filter( (product) => product.category === idCategory )
-          setProducts(filterProducts)
-        }else{
-          //guardar toda la lista de los productos
-          setProducts(data)
-        }
-      })
-      .catch((error) => {
-        console.error(error)
-      })
-      .finally(() => {
-        console.log("termino la promesa")
-      })
+    if(idCategory){
+      getProductsByCategory()
+    }else{
+      getProducts()
+    }
   }, [idCategory])
+
 
   return (
     <div className="itemlistcontainer">
