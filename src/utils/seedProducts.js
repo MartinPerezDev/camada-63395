@@ -1,3 +1,7 @@
+import db from "../db/db.js";
+import { collection, addDoc } from "firebase/firestore"
+import data from "../data/data.json" assert { type: "json" }
+
 const products = [
   {
     id: "Grt223",
@@ -55,13 +59,17 @@ const products = [
   },
 ]
 
-const getProducts = () => {
-  return new Promise( (resolve, reject) => {
-    //simulamos un retraso de red de 2segundos
-    setTimeout(()=>{
-      resolve(products)
-    }, 2000)
-  })
+const seedProducts = async() => {
+  try{
+    const productsRef = collection(db, "products")
+    products.map( async( { id, ...dataProduct } ) => {
+      await addDoc(productsRef, dataProduct)
+    })
+
+    console.log("Productos subidos correctamente!")
+  }catch(error){
+    console.log(error)
+  }
 }
 
-export { getProducts }
+seedProducts()
